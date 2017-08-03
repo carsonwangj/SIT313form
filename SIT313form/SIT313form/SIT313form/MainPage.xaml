@@ -8,29 +8,48 @@
 
     <StackLayout Padding="60"
                  VerticalOptions="Center">
-        
-        //Title
+
         <Label Text="Game Form"
-                FontSize="30"/>
-        
-        
-        //account label set up
-        <Label Text="Account Number"/>
-        <Entry x:Name="MainEntry"/>
+                FontSize="30"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               TextColor="Blue"/>
 
-        //password label set up
-        <Label Text="Password"/>
-        <Entry x:Name="MainEntry"/>
 
-        //login button
+        <Label Text="Account Number"
+               TextColor="Black"/>
+        <Entry x:Name="Account"
+               />
+
+        <Label Text="Password"
+               TextColor="Black"/>
+        <Entry x:Name="Password"
+               />
+
+
+
         <Button Clicked="Button_OnClicked"
                 Text="Log in!"
                 BackgroundColor="Blue"
                 TextColor="White"/>
         
-        //message display>
-        <Label x:Name="MainLabel"/>
+        <Label x:Name="MainLabel"
+               TextColor="Red"/>
+        
+        <Label Text="Or"
+                FontSize="30"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               TextColor="Black"/>
 
+        <Button Clicked="Button_signup"
+                Text="Sign Up!"
+                BackgroundColor="Blue"
+                TextColor="White"/>
 
+        <Label x:Name="Server"
+               TextColor="Red"/>
+
+    </StackLayout>
 
 </ContentPage>

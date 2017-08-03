@@ -16,15 +16,23 @@ namespace SIT313form
 
         private void Button_OnClicked(object sender, EventArgs e)
         {
-            string text = MainEntry.Text;
-            if(MainEntry.Text == "admin")
+            string text = Account.Text;
+            string text1 = Password.Text;
+            if(Account.Text == "admin" && Password.Text =="123")
             {
                 MainLabel.Text = "Hello" + text;
             }
             else
             {
-                MainLabel.Text = "Sorry,wrong number";
+                MainLabel.Text = "Sorry,Check your account";
             }
+        }
+
+
+        private void Button_signup(object sender, EventArgs e)
+        {
+            string text3 = Server.Text;
+            Server.Text = "Server Busy";
         }
     }
 }
