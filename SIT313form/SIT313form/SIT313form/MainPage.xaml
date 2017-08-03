@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SIT313form"
+             x:Class="SIT313form.MainPage">
+
+    <StackLayout>
+        <Entry x:Name="MainEntry"/>
+        <Button Clicked="Button_OnClicked"
+                Text="Say Hello!"/>
+
+        <Label x:Name="MainLabel"/>
+    </StackLayout>
+
+</ContentPage>
