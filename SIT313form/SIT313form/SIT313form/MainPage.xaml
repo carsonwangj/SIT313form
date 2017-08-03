@@ -21,7 +21,7 @@
 
 
 
-            <Label Text="Game Form"
+            <Label Text="Game Forum"
                 FontSize="30"
                VerticalOptions="Center"
                HorizontalOptions="Center"
