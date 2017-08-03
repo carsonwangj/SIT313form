@@ -3,6 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SIT313form.Page1"
              Title="Form Page">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Log out"
+                     Icon="ic_face_black_24dp.png"
+                     Priority="0"
+                     Order="Secondary"
+                     Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
     <ContentPage Title="Company List" Icon="ic_assignment_black_24dp.png" >
         <ContentPage.Content>
 
@@ -41,6 +48,34 @@
                            
                            TextChanged="Handle_TextChanged"/>
                 <ListView x:Name="SuggestionList"/>
+
+            </StackLayout>
+
+        </ContentPage.Content>
+    </ContentPage>
+
+    <ContentPage Title="FAQ" Icon="ic_help_outline_black_24dp.png">
+        <ContentPage.Content>
+            <StackLayout VerticalOptions="Center"
+                             Padding="60">
+                <Label Text="What is your favourite game?"
+                FontSize="20"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               TextColor="Black"/>
+
+                <Label x:Name="commentlabel"
+                       TextColor="Blue"
+                       FontSize="18"/>
+
+
+
+                <Entry x:Name="Comment" Placeholder="Comments"
+               />
+                <Button Clicked="Comment_OnClicked"
+                Text="Post!"
+                BackgroundColor="Blue"
+                TextColor="White"/>
 
             </StackLayout>
 

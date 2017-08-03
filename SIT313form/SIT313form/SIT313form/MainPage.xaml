@@ -8,6 +8,13 @@
 
 
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Setting"
+                     Icon="ic_face_black_24dp.png"
+                     Priority="0"
+                     Order="Secondary"
+                     />
+    </ContentPage.ToolbarItems>
         <StackLayout Padding="60"
                  VerticalOptions="Center" >
 

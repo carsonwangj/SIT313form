@@ -40,6 +40,12 @@ namespace SIT313form
                     {
                         Company = "CD projekt",
                         game = "The Witcher, Gwent: The Witcher Card Game, Cyberpunk 2077"
+                    },                
+                    
+                    new Game
+                    {
+                        Company = "Blizzard Entertainment",
+                        game = "StarCraft, Diablo, Warcraft III: Reign of Chaos, Overwatch, Hearthstone, Heroes of the Storm"
                     }
 
              };
@@ -57,8 +63,24 @@ namespace SIT313form
             //var s = from c in games where c.Contains(keyword) select c;
             SuggestionList.ItemsSource = suggestions;
         }
-    }
 
+        private async void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainPage());
+        }
+
+        private void Comment_OnClicked(object sender, EventArgs e)
+        {
+            string text4 = commentlabel.Text;
+            string text5 = Comment.Text;
+
+            commentlabel.Text = Comment.Text;
+            DisplayAlert("Notification","Do you want to submit the comments?", "Yes", "Cancel");
+
+        }
         //void GameName_SearchButtonPressed(object sender, EventArgs e)
         //{}
+    }
+
+
 }
