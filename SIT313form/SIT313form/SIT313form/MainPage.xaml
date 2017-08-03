@@ -2,58 +2,59 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:SIT313form"
-             x:Class="SIT313form.MainPage">
+             x:Class="SIT313form.MainPage"
+             BackgroundImage="image/icZQy6.jpg">
 
 
-        
 
 
-    <StackLayout Padding="60"
+        <StackLayout Padding="60"
                  VerticalOptions="Center" >
 
-        
 
 
-        <Label Text="Game Form"
+
+            <Label Text="Game Form"
                 FontSize="30"
                VerticalOptions="Center"
                HorizontalOptions="Center"
                TextColor="Blue"/>
 
 
-        <Label Text="Account Number"
+            <Label Text="Account Number"
                TextColor="Black"/>
-        <Entry x:Name="Account"
+            <Entry x:Name="Account"
                />
 
-        <Label Text="Password"
+            <Label Text="Password"
                TextColor="Black"/>
-        <Entry x:Name="Password"
+            <Entry x:Name="Password"
                />
 
 
 
-        <Button Clicked="Button_OnClicked"
+            <Button Clicked="Button_OnClicked"
                 Text="Log in!"
                 BackgroundColor="Blue"
                 TextColor="White"/>
 
-        <Label x:Name="MainLabel"
+            <Label x:Name="MainLabel"
                TextColor="Red"/>
 
-        <Label Text="Or"
+            <Label Text="Or"
                 FontSize="30"
                VerticalOptions="Center"
                HorizontalOptions="Center"
                TextColor="Black"/>
 
-        <Button Clicked="Button_signup"
+            <Button Clicked="Button_signup"
                 Text="Sign Up!"
                 BackgroundColor="Blue"
                 TextColor="White"/>
 
-        <Label x:Name="Server"
+            <Label x:Name="Server"
                TextColor="Red"/>
 
-    </StackLayout>
+        </StackLayout>
+
 </ContentPage>

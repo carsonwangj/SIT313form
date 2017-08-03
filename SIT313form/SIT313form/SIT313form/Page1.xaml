@@ -3,20 +3,47 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SIT313form.Page1"
              Title="Form Page">
-    <ContentPage Title="List Page" Icon="ic_assignment_black_24dp.png">
-    <ContentPage.Content>
-            <StackLayout>
-                <Label Text="Carson"/>
-            </StackLayout>
-    </ContentPage.Content>
+    <ContentPage Title="Company List" Icon="ic_assignment_black_24dp.png" >
+        <ContentPage.Content>
+
+            <ListView x:Name="MainListView"
+                      HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <Grid BackgroundColor="LightPink"
+                                      HeightRequest="10"/>
+                                <StackLayout Orientation="Vertical" Padding="20"
+                                             BackgroundColor="LightBlue">
+                                    <Label Text="{Binding Company}"
+                                           Font="Large"
+                                           TextColor="Black"/>
+                                    <Label Text="{Binding game}"
+                                           Font="Bold"
+                                           Opacity="0.6"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </ContentPage.Content>
     </ContentPage>
 
 
-    <ContentPage Title="Search Page" Icon="ic_search_black_24dp.png">
+    <ContentPage Title="Top Game Search" Icon="ic_search_black_24dp.png">
         <ContentPage.Content>
-            <StackLayout>
-                <Label Text="This is form"/>
+            <StackLayout Orientation="Vertical">
+
+                <SearchBar x:Name="GameName"
+                           
+                           TextChanged="Handle_TextChanged"/>
+                <ListView x:Name="SuggestionList"/>
+
             </StackLayout>
+
         </ContentPage.Content>
     </ContentPage>
 </TabbedPage>
