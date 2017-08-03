@@ -13,7 +13,8 @@ namespace SIT313form
         {
             InitializeComponent();
 
-            MainPage = new SIT313form.MainPage();
+            MainPage = new NavigationPage(new MainPage());
+
         }
 
         protected override void OnStart()

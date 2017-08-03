@@ -14,13 +14,14 @@ namespace SIT313form
             InitializeComponent();
         }
 
-        private void Button_OnClicked(object sender, EventArgs e)
+        private async void Button_OnClicked(object sender, EventArgs e)
         {
             string text = Account.Text;
             string text1 = Password.Text;
             if(Account.Text == "admin" && Password.Text =="123")
             {
-                MainLabel.Text = "Hello" + text;
+
+                await Navigation.PushAsync(new Page1());
             }
             else
             {
