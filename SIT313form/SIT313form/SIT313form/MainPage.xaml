@@ -4,12 +4,33 @@
              xmlns:local="clr-namespace:SIT313form"
              x:Class="SIT313form.MainPage">
 
-    <StackLayout>
-        <Entry x:Name="MainEntry"/>
-        <Button Clicked="Button_OnClicked"
-                Text="Say Hello!"/>
 
+
+    <StackLayout Padding="60"
+                 VerticalOptions="Center">
+        
+        //Title
+        <Label Text="Game Form"
+                FontSize="30"/>
+        
+        
+        //account label set up
+        <Label Text="Account Number"/>
+        <Entry x:Name="MainEntry"/>
+
+        //password label set up
+        <Label Text="Password"/>
+        <Entry x:Name="MainEntry"/>
+
+        //login button
+        <Button Clicked="Button_OnClicked"
+                Text="Log in!"
+                BackgroundColor="Blue"
+                TextColor="White"/>
+        
+        //message display>
         <Label x:Name="MainLabel"/>
-    </StackLayout>
+
+
 
 </ContentPage>

@@ -17,8 +17,14 @@ namespace SIT313form
         private void Button_OnClicked(object sender, EventArgs e)
         {
             string text = MainEntry.Text;
-
-            MainLabel.Text = "Hello" + text;
+            if(MainEntry.Text == "admin")
+            {
+                MainLabel.Text = "Hello" + text;
+            }
+            else
+            {
+                MainLabel.Text = "Sorry,wrong number";
+            }
         }
     }
 }
